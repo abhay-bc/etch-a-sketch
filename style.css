@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 514px;
+    height: 514px;
+    border: 1px solid blueviolet;
+    margin: 3px auto;
+    line-height: 0;
+}
+
+.sq-div {
+    display: inline-block;
+    width: 32px; height: 32px;
+    border: 1px dotted blue
+}
