@@ -5,8 +5,8 @@ for(let i = 0; i < 256; i++) {
     sqDiv = document.createElement('div');
     sqDiv.setAttribute('class', 'sq-div');
     container.appendChild(sqDiv);
-    sqDiv.addEventListener('mouseover', ()=>{
-        sqDiv.style['background-color'] = randColor();
+    sqDiv.addEventListener('mouseover', (e)=>{
+        e.target.style['background-color'] = randColor();
     })
 }
 
