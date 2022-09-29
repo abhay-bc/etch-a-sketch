@@ -6,10 +6,13 @@
 
 .btn-container{
     padding: 10px 30px;
+    position: absolute;
 }
 
 .btn{
-    padding: 5px 8px;
+    width: 68px; height: 20px;
+    margin: 3px;
+    text-align: center;
     background-color: blueviolet;
     color: white;
     border: 1px dotted hsl(271, 76%, 53%);
@@ -20,15 +23,14 @@
 }
 
 .container {
-    width: 514px;
-    height: 514px;
-    border: 1px solid blueviolet;
+    width: 600px;
+    height: 600px;
+    outline: 1px solid blueviolet;
+    outline-offset: 1px;
     margin: 3px auto;
     line-height: 0;
 }
 
 .sq-div {
     display: inline-block;
-    width: 32px; height: 32px;
-    border: 1px dotted blue
 }
