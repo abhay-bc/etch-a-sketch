@@ -19,3 +19,4 @@ function randColor(){
     let color = `rgb(${rand(255)}, ${rand(255)}, ${rand(255) })`
     return color;
 }
+

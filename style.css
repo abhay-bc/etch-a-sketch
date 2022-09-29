@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.btn-container{
+    padding: 10px 30px;
+}
+
+.btn{
+    padding: 5px 8px;
+    background-color: blueviolet;
+    color: white;
+    border: 1px dotted hsl(271, 76%, 53%);
+}
+
+.btn:hover{
+    background-color: hsl(271, 23%, 50%);
+}
+
 .container {
     width: 514px;
     height: 514px;
