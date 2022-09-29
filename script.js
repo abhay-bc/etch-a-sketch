@@ -1,29 +1,27 @@
+const container = document.querySelector('.container');
+let child;
+let darkcount = 0;
+
 window.onload = ()=> {
     newlayout();
 }
 
-const container = document.querySelector('.container');
-
-function rand(a) {
-    let c = Math.floor(Math.random()*a)
-    return c;
-}
-
-function randColor(){
-    let color = `rgb(${rand(255)}, ${rand(255)}, ${rand(255) })`
-    return color;
+function bgWhite() {
+    for(let i = 0; i < child.length; i++) {
+        child[i].style['background-color'] =  'white';
+    }
 }
 
 function removelayout() {
-    let child = document.querySelectorAll('.sq-div')
     for(let i = 0; i < child.length; i++) {
-        child[i].style['background-color'] =  'white';
+        container.removeChild(child[i]);
     }
 }
 
 function newSize() {
     let square = prompt('Number of square (range 64 to 100)');
     let val = parseInt(square);
+    removelayout();
     if (isNaN(val)) {
         newlayout();
     } else {
@@ -49,6 +47,30 @@ function newlayout(numOfsq=16) {
 
         container.appendChild(sqDiv);
         sqDiv.addEventListener('mouseover', (e)=>{
-            e.target.style['background-color'] = 'black';
-        });}  
+            e.target.style['background-color'] = randColor();
+        });
+    }     
+    child = document.querySelectorAll('.sq-div');
+}
+
+function rand(a) {
+    let c = Math.floor(Math.random()*a)
+    return c;
+}
+
+function randColor(){
+    let color = `rgb(${darkness(darkcount)}, ${darkness(darkcount)}, ${darkness(darkcount)})`;
+    darkcount++;
+    return color;
+}
+
+function darkness(count) {
+    let remainder = count % 10;
+    remainder++;
+
+    let num = 100 - (remainder * 10);
+
+    let result = num * 2.55;
+    result = Math.floor(result);
+    return result;
 }

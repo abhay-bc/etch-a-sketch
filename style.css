@@ -4,9 +4,27 @@
     box-sizing: border-box;
 }
 
+body{
+    padding-top: 10px;
+}
+
+.container {
+    width: 601px;
+    height: 600px;
+    outline: 1px solid blueviolet;
+    outline-offset: 1px;
+    margin: 3px auto;
+    line-height: 0;
+}
+
+.sq-div {
+    display: inline-block;
+}
+
 .btn-container{
-    padding: 10px 30px;
-    position: absolute;
+    padding-left: 30px;
+    padding-top: 30px;
+    position: fixed;
 }
 
 .btn{
@@ -20,17 +38,4 @@
 
 .btn:hover{
     background-color: hsl(271, 23%, 50%);
-}
-
-.container {
-    width: 600px;
-    height: 600px;
-    outline: 1px solid blueviolet;
-    outline-offset: 1px;
-    margin: 3px auto;
-    line-height: 0;
-}
-
-.sq-div {
-    display: inline-block;
 }
