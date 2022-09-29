@@ -53,13 +53,11 @@ function newlayout(numOfsq=16) {
     child = document.querySelectorAll('.sq-div');
 }
 
-function rand(a) {
-    let c = Math.floor(Math.random()*a)
-    return c;
-}
-
 function randColor(){
     let color = `rgb(${darkness(darkcount)}, ${darkness(darkcount)}, ${darkness(darkcount)})`;
+    if(darkcount >= 100) {
+        darkcount = 0;
+    }
     darkcount++;
     return color;
 }
